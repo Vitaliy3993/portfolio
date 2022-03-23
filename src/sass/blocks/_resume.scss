@@ -1,0 +1,95 @@
+.resume {
+    &__title {
+        position: relative;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        @include before__circle;
+        &:before {
+            top: -3px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        z-index: 3;
+    }
+    &__subtitle {
+        text-align: center;
+        margin-top: 6px;
+    }
+    &__wrapper {
+        padding: 60px 65px 0px 80px;
+        display: grid;
+        grid-template-columns: repeat(2, 425px);
+        column-gap: 135px;
+    }
+    &__column-title {
+        padding-left: 35px;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 15px;
+            height: 15px;
+            background-color: $main-color;
+            border-radius: 100%;
+            left: -7px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    &__item {
+        position: relative;
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 51px;
+            height: 1px;
+            background-color: #fff;
+            top: 50px;
+        }
+    }
+    &__item-head {
+        padding-left: 100px;
+        padding-top: 30px;
+    }
+    &__item-body {
+        padding-left: 43px;
+        font-size: 12px;
+        line-height: 18px;
+        margin-top: 12px;
+    }
+    &__item-icon {
+        position: absolute;
+        top: 35px;
+        left: 60px;
+        @include before__circle;
+        z-index: 3;
+        svg {
+            position: absolute;
+            left: 5px;
+            top: 15px;
+        }
+    }
+    &__item-info {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    ul {
+        list-style-type: none;
+        li {
+            position: relative;
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 1px;
+                height: calc(100% + 12px);
+                background-color: #fff;
+                top: -12px;
+            }
+        }
+    }
+}

@@ -1,0 +1,78 @@
+.skill {
+    padding: 120px 0 120px 0;
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(4, 270px);
+        gap: 13px;
+        grid-auto-columns: auto;
+        margin-top: 60px;
+    }
+    &__item {
+        padding: 30px 30px 30px 25px;
+        border: 1px solid #fff;
+        transition: 0.5s all;
+        svg {
+            min-height: 65px;
+        }
+        &:hover {
+            transform: scale(1.03);
+        }
+    }
+    &__name {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 21px;
+        margin-top: 20px;
+    }
+    &__descr {
+        margin-top: 15px;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    &__percents {
+        margin-top: 120px;
+        display: grid;
+        grid-template-columns: repeat(3, 370px);
+        grid-auto-columns: auto;
+        gap: 45px;
+    }
+    &__percents-item {
+        position: relative;
+    }
+    &__percents-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__percent-block {
+        position: relative;
+        height: 14px;
+        background-color: #fff;
+        border-radius: 5px;
+        margin-top: 27px;
+        z-index: 9;
+    }
+    &__percent-background {
+        position: absolute;
+        width: 100%;
+        border-radius: 6px;
+        height: 14px;
+        background-color: $main-color;
+        top: 48px;
+        z-index: 3;
+    }
+    &__percent-title {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 21px;
+        z-index: 1;
+        @include before__circle;
+        &:before {
+            top: -10%;
+        }
+        
+    }
+    &__percent-number {
+        font-size: 14px;
+        line-height: 21px;
+    }
+}

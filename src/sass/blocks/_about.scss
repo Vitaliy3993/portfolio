@@ -1,0 +1,54 @@
+.about {
+    padding: 120px 0 120px 0;
+    &__descr {
+        margin-top: 20px;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__main_photo {
+        max-width: 400px;
+        height: 600px;
+        object-fit: cover;
+    }
+    &__information {
+        margin-right: 100px;
+        max-width: 570px;
+        .divider {
+            margin: 0;
+        }
+    }
+    &__title {
+        margin-left: 10px;
+    }
+    &__circle {
+        position: relative;
+        z-index: 2;
+        @include before__circle;
+    }
+    &__circle-icon {
+        position: relative;
+        z-index: 2;
+        @include before__circle-icon;
+    }
+    &__skill-blocks {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    &__skill {
+        position: relative;
+        max-width: 260px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    &__skill-wrapper {
+        margin-left: 20px;
+    }
+    &__skill_icon_second {
+        padding-left: 5px;
+    }
+}

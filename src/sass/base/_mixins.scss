@@ -1,0 +1,26 @@
+@mixin before__circle {
+    &:before {
+        content: '';
+        width: 32px;
+        height: 32px;
+        background: $main-color;
+        position: absolute;
+        border-radius: 100%;
+        z-index: -1;
+        left: -9px;
+        top: -20%;
+    }
+}
+@mixin before__circle-icon {
+    &:before {
+        content: '';
+        width: 32px;
+        height: 32px;
+        background: $main-color;
+        position: absolute;
+        border-radius: 100%;
+        z-index: -1;
+        left: -9px;
+        top: -5%;
+    }
+}
