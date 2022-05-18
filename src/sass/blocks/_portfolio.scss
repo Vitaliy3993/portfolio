@@ -32,4 +32,25 @@
             filter: grayscale(0%);
         }
     }
+    &__slider {
+        position: relative;
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+    &__window {
+        display: block;
+        overflow: hidden;
+        width: 80%;
+        margin: 0 auto;
+        
+    }
+    &__image {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+    
 }

@@ -138,6 +138,8 @@
 .animate__fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 @-webkit-keyframes fadeInDown {
@@ -257,13 +259,39 @@ section {
 }
 
 .pageup {
-  display: none;
+  opacity: 0;
   position: fixed;
   bottom: 40px;
   right: 40px;
   width: 40px;
   height: 40px;
   z-index: 20;
+}
+
+.active {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.chevron-left {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+  cursor: pointer;
+}
+
+.chevron-right {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0;
+  cursor: pointer;
 }
 
 .promo {
@@ -453,8 +481,8 @@ section {
 }
 
 .about__information {
-  margin-right: 100px;
-  max-width: 570px;
+  margin: 0 auto;
+  width: 500px;
 }
 
 .about__information .divider {
@@ -514,21 +542,49 @@ section {
 .about__skill {
   position: relative;
   max-width: 260px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin-top: 20px;
+  cursor: pointer;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.about__skill:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
 }
 
 .about__skill-wrapper {
   margin-left: 20px;
 }
 
+.about__skill-main-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.about__skill-main-wrapper:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
 .about__skill_icon_second {
   padding-left: 5px;
+}
+
+.about__skill-accordeon {
+  margin-top: 20px;
+  background-color: #4d4d4d;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  width: 220px;
+  font-size: 14px;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
 }
 
 .divider {
@@ -700,6 +756,10 @@ section {
   opacity: 0.5;
 }
 
+.resume {
+  position: relative;
+}
+
 .resume__title {
   position: relative;
   font-weight: bold;
@@ -741,6 +801,18 @@ section {
       grid-template-columns: repeat(2, 425px);
   -webkit-column-gap: 135px;
           column-gap: 135px;
+  z-index: 1;
+}
+
+.resume__img {
+  position: absolute;
+  z-index: 0;
+  right: 0;
+  width: 55%;
+  top: 180px;
+  height: 85%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .resume__column-title {
@@ -851,10 +923,21 @@ section {
 }
 
 .skill__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
   padding: 30px 30px 30px 25px;
   border: 1px solid #fff;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
+  min-height: 300px;
+  transition: 0.5s all;
+  cursor: pointer;
 }
 
 .skill__item svg {
@@ -866,17 +949,39 @@ section {
           transform: scale(1.03);
 }
 
+.skill__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
 .skill__name {
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 21px;
   margin-top: 20px;
+  bottom: 50%;
 }
 
 .skill__descr {
+  display: none;
+  width: 230px;
   margin-top: 15px;
   font-size: 12px;
   line-height: 18px;
+  top: 50%;
 }
 
 .skill__percents {
@@ -949,6 +1054,10 @@ section {
   line-height: 21px;
 }
 
+.border-yellow {
+  border: 6px ridge #e4e4e4;
+}
+
 .portfolio {
   padding: 0 0 70px 0;
 }
@@ -1008,8 +1117,31 @@ section {
           filter: grayscale(0%);
 }
 
+.portfolio__slider {
+  position: relative;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.portfolio__window {
+  display: block;
+  overflow: hidden;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.portfolio__image {
+  width: 100%;
+}
+
+.portfolio__image img {
+  width: 100%;
+}
+
 .price {
-  padding-bottom: 120px;
+  padding-bottom: 20px;
 }
 
 .price__wrapper {
@@ -1066,6 +1198,8 @@ section {
 
 .contacts {
   padding-bottom: 90px;
+  position: relative;
+  z-index: 1;
 }
 
 .contacts__wrapper {
@@ -1078,6 +1212,15 @@ section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-top: 60px;
+}
+
+.contacts__img {
+  position: absolute;
+  z-index: -1;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
 }
 
 .contacts__photo img {
@@ -1257,7 +1400,6 @@ section {
 @media (max-width: 1199px) {
   .container {
     width: 900px;
-    left: 30px;
     position: relative;
   }
   .promo .title__fz20 {
@@ -1281,7 +1423,7 @@ section {
     font-size: 15px;
   }
   .about__skill {
-    width: 200px;
+    width: 220px;
   }
   .about__information {
     margin-right: 50px;
@@ -1377,12 +1519,12 @@ section {
   }
   .about__skill-blocks {
     position: relative;
-    left: -300px;
-    width: 560px;
-    margin-top: 60px;
+    width: 320px;
+    margin-top: 20px;
+    display: block;
   }
   .about__skill {
-    margin-left: 20px;
+    margin-left: 10px;
   }
   .resume__wrapper {
     -ms-grid-columns: (300px)[2];
@@ -1464,8 +1606,7 @@ section {
     padding: 50px 0;
   }
   .about__skill-blocks {
-    width: 470px;
-    left: -280px;
+    width: 240px;
   }
   .about__information {
     width: 270px;
@@ -1617,9 +1758,6 @@ section {
   .about__skill {
     margin-left: 20px;
     width: 260px;
-  }
-  .about__skill-right {
-    margin-left: 25px;
   }
   .menu__block {
     padding-left: 10px;

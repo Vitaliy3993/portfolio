@@ -8,9 +8,15 @@
         margin-top: 60px;
     }
     &__item {
+        display: flex;
+        flex-direction: column;
+        position: relative;
         padding: 30px 30px 30px 25px;
         border: 1px solid #fff;
         transition: 0.5s all;
+        min-height: 300px;
+        transition: 0.5s all;
+        cursor: pointer;
         svg {
             min-height: 65px;
         }
@@ -18,16 +24,28 @@
             transform: scale(1.03);
         }
     }
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
     &__name {
         font-weight: 700;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 21px;
         margin-top: 20px;
+        bottom: 50%;
     }
     &__descr {
+        display: none;
+        width: 230px;
         margin-top: 15px;
         font-size: 12px;
         line-height: 18px;
+        top: 50%;
     }
     &__percents {
         margin-top: 120px;
@@ -75,4 +93,7 @@
         font-size: 14px;
         line-height: 21px;
     }
+}
+.border-yellow {
+    border: 6px ridge rgb(228, 228, 228);
 }

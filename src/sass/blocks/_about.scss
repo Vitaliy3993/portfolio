@@ -13,8 +13,8 @@
         object-fit: cover;
     }
     &__information {
-        margin-right: 100px;
-        max-width: 570px;
+        margin: 0 auto;
+        width: 500px;
         .divider {
             margin: 0;
         }
@@ -41,14 +41,36 @@
     &__skill {
         position: relative;
         max-width: 260px;
-        display: flex;
-        justify-content: space-between;
+        
         margin-top: 20px;
+        cursor: pointer;
+        transition: 0.5s all;
+        &:hover {
+            transform: scale(1.02);
+        }
     }
     &__skill-wrapper {
         margin-left: 20px;
     }
+    &__skill-main-wrapper {
+        display: flex;
+        cursor: pointer;
+        transition: 0.5s all;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
     &__skill_icon_second {
         padding-left: 5px;
+    }
+    &__skill-accordeon {
+        margin-top: 20px;
+        background-color: rgb(77, 77, 77);
+        padding: 10px;
+        text-align: center;
+        border-radius: 5px;
+        width: 220px;
+        font-size: 14px;
+        transition: 0.5s all;
     }
 }
