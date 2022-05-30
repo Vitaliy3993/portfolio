@@ -80,7 +80,7 @@
 }
 .animate__animated.animate__fast {
   -webkit-animation-duration: calc(1s * 0.8);
-  animation-duration: calc(1s * 0.8);
+  animation-duration: 0.5s;
   -webkit-animation-duration: calc(var(--animate-duration) * 0.8);
   animation-duration: calc(var(--animate-duration) * 0.8);
 }
@@ -96,7 +96,34 @@
   -webkit-animation-duration: calc(var(--animate-duration) * 3);
   animation-duration: calc(var(--animate-duration) * 3);
 }
+@-webkit-keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
 
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+.animate__flash {
+  -webkit-animation-name: flash;
+  animation-name: flash;
+}
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;

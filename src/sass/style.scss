@@ -65,7 +65,12 @@ section {
 @import 'blocks/price';
 @import 'blocks/contacts';
 
+.lang-ua {
+    display: '';
+}
 
-
+.lang-ru {
+    display: '';
+}
 
 @import 'media/media';

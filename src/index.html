@@ -36,6 +36,11 @@
 
   <div class="menu">
     <div class="menu__block">
+      <div class="menu__trigger">
+        <button class="menu__trigger__lang language-ua menu__trigger__lang__active">Ua</button>
+        <button class="menu__trigger__lang language-ru">Ru</button>
+      </div>
+      
       <div class="menu__close">
         <svg width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M17.1568 14.5231L28.4489 3.23075C29.1837 2.49623 29.1837 1.30861 28.4489 0.574085C27.7144 -0.160437 26.5267 -0.160437 25.7922 0.574085L14.4998 11.8665L3.20781 0.574085C2.47295 -0.160437 1.28567 -0.160437 0.551149 0.574085C-0.183716 1.30861 -0.183716 2.49623 0.551149 3.23075L11.8432 14.5231L0.551149 25.8155C-0.183716 26.55 -0.183716 27.7376 0.551149 28.4721C0.917206 28.8385 1.39852 29.0226 1.87948 29.0226C2.36045 29.0226 2.84141 28.8385 3.20781 28.4721L14.4998 17.1798L25.7922 28.4721C26.1586 28.8385 26.6396 29.0226 27.1205 29.0226C27.6015 29.0226 28.0825 28.8385 28.4489 28.4721C29.1837 27.7376 29.1837 26.55 28.4489 25.8155L17.1568 14.5231Z" fill="#fff"/>
@@ -43,7 +48,15 @@
       </div>
 
       <nav>
-        <ul class="menu__list">
+        <ul class="menu__list lang-ua">
+          <li class="menu__link"><a href="#about">ПРО МЕНЕ</a></li>
+          <li class="menu__link"><a href="#resume">МІЙ ДОСВІД</a></li>
+          <li class="menu__link"><a href="#skill">МОЇ НАВИЧКИ</a></li>
+          <li class="menu__link"><a href="#portfolio">МОЇ РОБОТИ</a></li>
+          <li class="menu__link"><a href="#price">ПРАЙС-ЛИСТ</a></li>
+          <li class="menu__link"><a href="#contacts">КОНТАКТИ</a></li>
+        </ul>
+        <ul class="menu__list lang-ru">
           <li class="menu__link"><a href="#about">ПРО МЕНЯ</a></li>
           <li class="menu__link"><a href="#resume">МОЙ ОПЫТ</a></li>
           <li class="menu__link"><a href="#skill">МОИ НАВЫКИ</a></li>
@@ -99,17 +112,30 @@
       </a>
       </div>
       <div class="sidepanel__divider"></div>
-      <div class="sidepanel__text"><span>Социальные сети</span></div>
+      <div class="sidepanel__text"><span>
+        <div class="lang-ua">Соціальні мережі</div>
+        <div class="lang-ru">Социальные сети</div>
+      </span></div>
     </aside>
     <div class="container">
-      <h2 class="title title__fz20 promo__circle animate__animated animate__fadeInDown">Меня зовут Кадельчук Виталий</h2>
-      <h1 class="title title__fz48 promo__title animate__animated animate__fadeInUp">Я frontend-разработчик <br>
-        из города <br>Каменец-Подольский</h1>
+      <h2 class="title title__fz20 promo__circle animate__animated animate__fadeInDown">
+        <div class="lang-ua">Мене звати Кадельчук Віталій</div>
+        <div class="lang-ru">Меня зовут Кадельчук Виталий</div>
+      </h2>
+      <h1 data-anime class="title title__fz48 promo__title animate__animated animate__fadeInUp">
+        <div class="lang-ua">Я frontend-розробник <br> з міста <br>Кам'янець-Подільський</div>
+        <div class="lang-ru">Я frontend-разработчик <br> из города <br>Каменец-Подольский</div>
+      </h1>
       <div class="promo__btns animate__animated animate__fadeInUp">
-        <a href="#portfolio" class="promo__link btn">Портфолио</a>
-        <a href="#about" class="promo__link">Про меня</a>
+        <a href="#portfolio" class="promo__link btn lang-ua">Портфоліо</a>
+        <a href="#portfolio" class="promo__link btn lang-ru">Портфолио</a>
+        <a href="#about" class="promo__link lang-ua">Про мене</a>
+        <a href="#about" class="promo__link lang-ru">Про меня</a>
       </div>
     </div>
+    <a href="#about" class="arrow-down">
+      <img  src="icons/chevrons/arrow_down.png" alt="arrow_down">
+    </a>
   </section>
 
   <section id="about" class="about">
@@ -128,21 +154,33 @@
 
         </picture>
         <div class="about__information">
-          <div class="title title__fz20 about__title about__circle">Про меня</div>
-          <h2 class="title title__fz36 about__subtitle">Меня зовут Виталий</h2>
+          <div class="title title__fz20 about__title about__circle">
+            <div class="lang-ua">Про мене</div>
+            <div class="lang-ru">Про меня</div>
+          </div>
+          <h2 class="title title__fz36 about__subtitle">
+            <div class="lang-ua">Мене звати Віталій</div>
+            <div class="lang-ru">Меня зовут Виталий</div>
+          </h2>
           <div class="divider"></div>
-          <p class="about__descr">Я начинающий frontend разработчик. Мне 28.</p>
+          <p class="about__descr">
+            <div class="lang-ua">Я початківець у frontend разробці. Мені 28.</div>
+            <div class="lang-ru">Я начинающий frontend разработчик. Мне 28.</div>
+          </p>
           <div class="about__skill-blocks">
             <div class="about__skill">
               <div class="about__skill-main-wrapper">
                 <div class="about__skill_icon about__circle-icon"><img src="icons/about_me/web_development.svg" alt="web" class="about__skill_icon"></div>
                 <div class="about__skill-wrapper">
-                  <div class="title__fz14">Верстка сайтов</div>
+                  <div class="title__fz14">
+                    <div class="lang-ua">Верстання сайтів</div>
+                    <div class="lang-ru">Верстка сайтов</div>
+                  </div>
                   <div class="title__fz12 title__fz12-mt6"></div>
                 </div>
               </div>
               <div class="about__skill-accordeon">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab atque ipsa obcaecati modi aliquid necessitatibus rerum est, maiores voluptates eaque iure reiciendis molestiae aperiam minus, qui non a reprehenderit quidem.
+                <img src="img/about/about-front.gif" alt="about-front">
               </div>
             </div>
 
@@ -150,12 +188,15 @@
               <div class="about__skill-main-wrapper">
                 <div class="about__skill_icon about__skill_icon_second about__circle-icon"><img src="icons/about_me/mobile_dev.svg" alt="mobile" class="about__icon"></div> 
                 <div class="about__skill-wrapper">
-                  <div class="title__fz14">Интерактивность на странице</div>
+                  <div class="title__fz14">
+                    <div class="lang-ua">Інтерактивність на сторінці</div>
+                    <div class="lang-ru">Интерактивность на странице</div>
+                  </div>
                   <div class="title__fz12 title__fz12-mt6"></div>
                 </div>
               </div>
               <div class="about__skill-accordeon">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab atque ipsa obcaecati modi aliquid necessitatibus rerum est, maiores voluptates eaque iure reiciendis molestiae aperiam minus, qui non a reprehenderit quidem.
+                <img src="img/about/js.gif" alt="js">
               </div>
             </div>
           </div>
@@ -165,16 +206,21 @@
   </section>
 
   <section class="resume" id="resume">
-    <img class="resume__img" src="img/resume/code.png" alt="code">
+    <img class="resume__img resume__img__mac" src="img/resume/mac.png" alt="mac">
+    <img class="resume__img resume__img__tablet" src="img/resume/tablet.png" alt="tablet">
+    <img class="resume__img resume__img__phone" src="img/resume/phone.png" alt="phone">
     <div class="container">
-      <div class="title title_fz20 resume__title resume__circle">Опыт</div>
-      <h2 class="title title__fz36 resume__subtitle">Чем я буду полезен</h2>
+      <div class="title title_fz20 resume__title resume__circle lang-ua">Досвід</div>
+      <div class="title title_fz20 resume__title resume__circle lang-ru">Опыт</div>
+      <h2 class="title title__fz36 resume__subtitle lang-ua">Чим буду корисний</h2>
+      <h2 class="title title__fz36 resume__subtitle lang-ru">Чем я буду полезен</h2>
       <div class="divider resume__divider"></div>
 
       <div class="resume__wrapper">
         
         <div class="resume__column">
-          <h3 class="title title__fz20 resume__column-title">Образование</h3>
+          <h3 class="title title__fz20 resume__column-title lang-ua">Освіта</h3>
+          <h3 class="title title__fz20 resume__column-title lang-ru">Образование</h3>
           <ul>
             <li>
               <div class="resume__item">
@@ -191,9 +237,11 @@
                       </svg>
                   </div>
                   <div class="title title__fz14">Udemy</div>
-                  <div class="resume__item-info">Курсы по Web-разработке | 2021</div>
+                  <div class="resume__item-info lang-ua">Курси по Web-разробці | 2021</div>
+                  <div class="resume__item-info lang-ru">Курсы по Web-разработке | 2021</div>
                 </div>
-                <div class="resume__item-body">Знаком с графическими редакторами в контексте верстки: Photoshop, Zeplin, Figma, Avocode... С SVG графикой, HTML5 и CSS3 в реальных проектах, с основами Jquery, с Git и GitHub, с Bootstrap 4/5 и с технологией FlexBox, с технологией CSS Grid, с использованием препроцессоров Sass/Scss/Less в своих проектах, с созданием мобильной адаптации сайтов и приложений, БЭМ, Gulp, валидацией верстки...</div>
+                <div class="resume__item-body lang-ua">Знайомий із графічними редакторами в контексті верстання: Photoshop, Zeplin, Figma, Avocode... З SVG графікою, HTML5 та CSS3 у реальних проектах, з основами Jquery, Git та GitHub, Bootstrap 4/5 та з технологією FlexBox, CSS Grid, використанням препроцесорів Sass/Scss/Less у своїх проектах, створенням мобільної адаптації сайтів та додатків, БЕМ, Gulp, валідацією верстки...</div>
+                <div class="resume__item-body lang-ru">Знаком с графическими редакторами в контексте верстки: Photoshop, Zeplin, Figma, Avocode... С SVG графикой, HTML5 и CSS3 в реальных проектах, с основами Jquery, с Git и GitHub, с Bootstrap 4/5 и с технологией FlexBox, с технологией CSS Grid, с использованием препроцессоров Sass/Scss/Less в своих проектах, с созданием мобильной адаптации сайтов и приложений, БЭМ, Gulp, валидацией верстки...</div>
               </div>
             </li>
             <li>
@@ -215,9 +263,11 @@
                       </svg>
                       
                   </div>
-                  <div class="title title__fz14">Полный курс по JavaScript + React - с нуля до результата</div>
+                  <div class="title title__fz14 lang-ua">Повний курс по JavaScript + React - з нуля до результату</div>
+                  <div class="title title__fz14 lang-ru">Полный курс по JavaScript + React - с нуля до результата</div>
                 </div>
-                <div class="resume__item-body">Знаком с основами программирования и алгоритмов JS, основами объектно ориентированного программирования, основными принципами JavaScript, AJAX, JSON и тд., с npm, Babel, Webpack, Heroku и тд.</div>
+                <div class="resume__item-body lang-ua">Знайомий з основами програмування JS, объектно ориентувального програмування, основними принципами JavaScript, AJAX, JSON і т.д., npm, Babel, Webpack, Heroku і т.д.</div>
+                <div class="resume__item-body lang-ru">Знаком с основами программирования JS, объектно ориентированного программирования, основными принципами JavaScript, AJAX, JSON и т.д., с npm, Babel, Webpack, Heroku и т.д.</div>
               </div>
             </li>
 
@@ -229,16 +279,17 @@
                       <path d="M17.7169 16.333L16.2497 15.9022L13.0575 13.8172V13.3394C13.9817 12.6423 14.6164 11.5767 14.7343 10.3553C15.1978 10.2807 15.553 9.87789 15.553 9.39371V8.07999C15.553 8.07491 15.5524 8.06993 15.5522 8.06486V6.4007C15.7369 6.26847 15.854 6.05309 15.854 5.81149V4.28854L18.057 3.91329C18.4191 3.85162 18.6794 3.56407 18.705 3.19772C18.7305 2.83136 18.5126 2.51046 18.1626 2.39918L10.736 0.0369751C10.5811 -0.0123413 10.4174 -0.0122925 10.2625 0.0369263L2.83579 2.39918C2.48583 2.51046 2.26787 2.83136 2.2934 3.19767C2.30961 3.43043 2.42084 3.63112 2.59252 3.76256V5.75411H2.57436C2.15615 5.75411 1.81591 6.09435 1.81591 6.51256V7.50113L1.32631 10.3748C1.24169 10.8718 1.62451 11.3267 2.12988 11.3267H3.78754C4.29179 11.3267 4.67592 10.8729 4.59111 10.3747L4.10151 7.50113V6.51256C4.10151 6.09435 3.76127 5.75411 3.34306 5.75411H3.32495V3.97858L5.14594 4.28873V5.81149C5.14594 6.05206 5.26259 6.2671 5.44638 6.39952L5.44707 8.08014V9.39371C5.44707 9.87794 5.80219 10.2807 6.26572 10.3553C6.38364 11.576 7.01762 12.6411 7.94096 13.3383V13.8183L4.74946 15.9029L3.28339 16.3332C1.71459 16.7937 0.606879 18.2339 0.606879 19.9082V20.9996C0.606879 21.2018 0.770795 21.3658 0.97309 21.3658C1.17538 21.3658 1.3393 21.2019 1.3393 20.9996V19.9082C1.3393 18.5886 2.22353 17.4075 3.48969 17.0359L4.85571 16.635L10.313 19.8778C10.4238 19.9436 10.5704 19.9471 10.6872 19.8778L16.1448 16.6348L17.5107 17.0358C18.7767 17.4074 19.6609 18.5885 19.6609 19.9079V23.4449C19.6609 23.8986 19.2918 24.2677 18.8381 24.2677H17.224V22.6892C17.224 22.4869 17.0601 22.323 16.8578 22.323C16.6556 22.323 16.4916 22.4869 16.4916 22.6892V24.2677H4.50683V22.6892C4.50683 22.4869 4.34291 22.323 4.14062 22.323C3.93832 22.323 3.77441 22.4869 3.77441 22.6892V24.2677H2.16196C1.70829 24.2677 1.3392 23.8986 1.3392 23.4449V22.7114C1.3392 22.5092 1.17529 22.3452 0.972992 22.3452C0.770697 22.3452 0.606781 22.5091 0.606781 22.7114V23.4449C0.606781 24.3024 1.30439 25 2.16191 25H18.838C19.6956 25 20.3932 24.3024 20.3932 23.4449V19.9079C20.3932 18.2731 19.3232 16.8046 17.7169 16.333ZM3.78749 10.5943H2.12988C2.07866 10.5943 2.03959 10.5485 2.04828 10.4977L2.49116 7.8983H3.42621L3.86909 10.4977C3.87773 10.5484 3.83896 10.5943 3.78749 10.5943ZM3.36909 6.51256V7.16593H2.54824V6.51256C2.54824 6.49816 2.55991 6.48649 2.57431 6.48649H3.34296C3.35742 6.48644 3.36909 6.49816 3.36909 6.51256ZM9.19028 18.2213L9.33603 18.4453L5.59731 16.2237L7.97041 14.6737C8.07802 15.9364 8.49423 17.1515 9.19028 18.2213ZM9.18774 16.6404C10.0497 16.7629 10.9498 16.763 11.8123 16.6404C11.6456 17.0505 11.4402 17.4462 11.1958 17.8219L10.5 18.8914L9.80415 17.8219C9.55976 17.4462 9.35439 17.0505 9.18774 16.6404ZM11.8097 18.2213C12.5058 17.1515 12.922 15.9364 13.0295 14.6737L15.4026 16.2237L11.664 18.4453L11.8097 18.2213ZM13.9519 6.53707H14.8198V7.71373H14.389C14.1479 7.71373 13.9518 7.51764 13.9518 7.27657V6.53707H13.9519ZM3.05776 3.09713L10.4846 0.734827C10.4941 0.731799 10.5043 0.73175 10.514 0.734876L17.9408 3.09713C17.9561 3.10201 17.9771 3.10865 17.9745 3.14679C17.9718 3.18488 17.95 3.18854 17.9341 3.19127L15.4787 3.60948L14.5568 3.49547C14.3562 3.47062 14.1733 3.61329 14.1484 3.81398C14.1236 4.01471 14.2663 4.19752 14.4669 4.22233L15.1217 4.30333V5.8047L5.87832 5.80436V4.30328L9.66772 3.83439C10.2197 3.76617 10.7792 3.76617 11.3308 3.83439L12.765 4.01178C12.9657 4.03663 13.1486 3.89401 13.1734 3.69332C13.1983 3.49259 13.0557 3.30978 12.855 3.28492L11.4207 3.10753C10.8096 3.0319 10.1894 3.0319 9.57783 3.10753L5.5205 3.60958L3.0643 3.19127C3.04838 3.18854 3.02665 3.18488 3.02397 3.14679C3.02133 3.10865 3.04238 3.10197 3.05776 3.09713ZM6.17924 7.71373L6.17875 6.53707H7.04814V7.27662C7.04814 7.51764 6.85205 7.71378 6.61093 7.71378H6.17924V7.71373ZM6.98525 10.1671C6.9664 9.86886 6.71855 9.63527 6.42104 9.63527C6.28779 9.63527 6.17939 9.52687 6.17939 9.39366V8.44615H6.61093C7.25581 8.44615 7.78051 7.9215 7.78051 7.27662V6.53707H13.2194V7.27662C13.2194 7.9215 13.7441 8.44615 14.389 8.44615H14.8206V9.39366C14.8206 9.52687 14.7122 9.63527 14.5789 9.63527C14.2814 9.63527 14.0335 9.86886 14.0147 10.1671C13.898 12.0162 12.3542 13.4647 10.4999 13.4647C8.6457 13.4647 7.1019 12.0162 6.98525 10.1671ZM10.5 14.197C11.1513 14.197 11.7704 14.0481 12.3251 13.7833V14.0154C12.3251 14.6415 12.2406 15.2591 12.078 15.8548C11.0828 16.0446 9.95761 16.0523 8.92202 15.8548C8.75937 15.2592 8.6749 14.6416 8.6749 14.0154C8.6749 14.0076 8.67382 14.0001 8.67334 13.9924C8.67324 13.9909 8.67338 13.9894 8.67329 13.9879V13.7826C9.22841 14.0478 9.84804 14.197 10.5 14.197Z" fill="white"/>
                       </svg>
                   </div>
-                  <div class="title title__fz14">Практический JavaScript (Продвинутый уровень)</div>
+                  <div class="title title__fz14 lang-ua">Практичний JavaScript</div>
+                  <div class="resume__item-info lang-ua">(Високий рівень)</div>
+                  <div class="title title__fz14 lang-ru">Практический JavaScript</div>
+                  <div class="resume__item-info lang-ru">(Продвинутый уровень)</div>
                 </div>
-                <div class="resume__item-body">Практика на реальных проектах</div>
+                <div class="resume__item-body lang-ua">Практика на реальних проектах</div>
+                <div class="resume__item-body lang-ru">Практика на реальных проектах</div>
               </div>
             </li>
-
-            
           </ul>
         </div>
-
         <!-- <div class="resume__column">
           <h3 class="title title__fz20 resume__column-title">Опыт работы</h3>
           <ul>
@@ -285,8 +336,10 @@
 
   <section class="skill" id="skill">
     <div class="container">
-      <div class="title title_fz20 resume__title resume__circle">Навыки</div>
-      <h2 class="title title__fz36 resume__subtitle">Что я использую в работе</h2>
+      <div class="title title_fz20 resume__title resume__circle lang-ua">Навички</div>
+      <div class="title title_fz20 resume__title resume__circle lang-ru">Навыки</div>
+      <h2 class="title title__fz36 resume__subtitle lang-ua">Що я використовую в роботі</h2>
+      <h2 class="title title__fz36 resume__subtitle lang-ru">Что я использую в работе</h2>
       <div class="divider resume__divider"></div>
 
       <div class="skill__items">
@@ -306,7 +359,11 @@
               </svg>
             <div class="skill__name">HTML5</div>
           </div>
-          <div class="skill__descr">Именно он создает каркас вашего сайта или приложения, а пятая версия позволит мне создавать более SEO-оптимизированную структуру вашего продукта</div>
+          <div class="skill__descr">
+            <div class="lang-ua">Саме він створює каркас вашого сайту або програми, а п'ята версія дозволить створювати більш SEO-оптимізовану структуру вашого продукту</div>
+            <div class="lang-ru">Именно он создает каркас вашего сайта или приложения, а пятая версия позволит создавать более SEO-оптимизированную структуру вашего продукта</div>
+          </div>
+          
         </div>
         <div class="skill__item">
           <div class="skill__wrapper">
@@ -320,7 +377,10 @@
             <div class="skill__name">CSS3</div>
           </div>
           
-          <div class="skill__descr">Этот язык стилей позволяет мне создавать абсолютно любой внешний вид вашего сайта или приложения. Все ограничивается только вашей фантазией!</div>
+          <div class="skill__descr">
+            <div class="lang-ua">Ця мова стилів дозволяє створювати абсолютно будь-який зовнішній вигляд вашого сайту або програми. Все обмежується лише вашою фантазією!</div>
+            <div class="lang-ru">Этот язык стилей позволяет мне создавать абсолютно любой внешний вид вашего сайта или приложения. Все ограничивается только вашей фантазией!</div>
+          </div>
         </div>
         <div class="skill__item">
           <div class="skill__wrapper">
@@ -332,7 +392,10 @@
             <div class="skill__name">Java Script</div>
           </div>
           
-          <div class="skill__descr">Этот язык программирования позволяет оживить все что угодно: слайдеры, окна, подсказки, вкладки, получение данных от сервера и многое другое</div>
+          <div class="skill__descr">
+            <div class="lang-ua">Ця мова програмування дозволяє пожвавити все що завгодно: слайдери, вікна, підказки, вкладки, отримання даних від сервера та багато іншого</div>
+            <div class="lang-ru">Этот язык программирования позволяет оживить все что угодно: слайдеры, окна, подсказки, вкладки, получение данных от сервера и многое другое</div>
+          </div>
         </div>
         <div class="skill__item">
           <div class="skill__wrapper">
@@ -351,14 +414,20 @@
             <div class="skill__name">Jquery</div>
           </div>
           
-          <div class="skill__descr">Библиотека Jquery позволит ускорить разработку. Без необходимости интегрировать в проект мы её не будем, но навык работы с ней присутствует</div>
+          <div class="skill__descr">
+            <div class="lang-ua">Бібліотека Jquery дозволить прискорити розробку. Без необхідності інтегрувати в проект ми її не будемо, але навичка роботи з нею присутня</div>
+            <div class="lang-ru">Библиотека Jquery позволит ускорить разработку. Без необходимости интегрировать в проект мы её не будем, но навык работы с ней присутствует</div>
+          </div>
         </div>
         <div class="skill__item">
           <div class="skill__wrapper">
             <img src="icons/skills/bootstrap.png" alt="bootstrap">
             <div class="skill__name">Bootstrap</div>
           </div>
-          <div class="skill__descr">Включает в себя HTML- и CSS-шаблоны оформления для типографики, веб-форм, кнопок, меток, блоков навигации и прочих компонентов веб-интерфейса, включая JavaScript-расширения. </div>
+          <div class="skill__descr">
+            <div class="lang-ua">Включає HTML- і CSS-шаблони оформлення для типографіки, веб-форм, кнопок, міток, блоків навігації та інших компонентів веб-інтерфейсу, включаючи JavaScript-розширення.</div>
+            <div class="lang-ru">Включает в себя HTML- и CSS-шаблоны оформления для типографики, веб-форм, кнопок, меток, блоков навигации и прочих компонентов веб-интерфейса, включая JavaScript-расширения.</div>
+          </div>
         </div>
         <div class="skill__item">
           <div class="skill__wrapper">
@@ -370,7 +439,10 @@
               </svg>
             <div class="skill__name">React</div>
           </div>
-          <div class="skill__descr">Эта библиотека позволяет создавать web-приложения. Мы можем создать максимально интерактивный продукт именно под ваши цели</div>
+          <div class="skill__descr">
+            <div class="lang-ua">Ця бібліотека дозволяє створювати веб-програми. Ми можемо створити максимально інтерактивний продукт саме під ваші цілі</div>
+            <div class="lang-ru">Эта библиотека позволяет создавать web-приложения. Мы можем создать максимально интерактивный продукт именно под ваши цели</div>
+          </div>
         </div>
         <div class="skill__item">
           <div class="skill__wrapper">
@@ -378,21 +450,30 @@
             <div class="skill__name">GitHub</div>
           </div>
           
-          <div class="skill__descr">GitHub — крупнейший веб-сервис для хостинга IT-проектов и их совместной разработки. С помощью широких возможностей Git программисты могут объединять свои репозитории.</div>
+          <div class="skill__descr">
+            <div class="lang-ua">GitHub - найбільший веб-сервіс для хостингу IT-проектів та їхньої спільної розробки. За допомогою широких можливостей Git програмісти можуть поєднувати свої репозиторії.</div>
+            <div class="lang-ru">GitHub — крупнейший веб-сервис для хостинга IT-проектов и их совместной разработки. С помощью широких возможностей Git программисты могут объединять свои репозитории.</div>
+          </div>
         </div>
         <div class="skill__item">
           <div class="skill__wrapper">
             <img src="icons/skills/gulp.png" alt="bootstrap">
             <div class="skill__name">Gulp</div>
           </div>
-          <div class="skill__descr">Gulp — это таск-менеджер для автоматического выполнения часто используемых задач (например, тестирования, объединения файлов), написанный на языке программирования JavaScript. </div>
+          <div class="skill__descr">
+            <div class="lang-ua">Gulp - це таск-менеджер для автоматичного виконання часто використовуваних завдань (наприклад, тестування, об'єднання файлів), написаний мовою програмування JavaScript.</div>
+            <div class="lang-ru">Gulp — это таск-менеджер для автоматического выполнения часто используемых задач (например, тестирования, объединения файлов), написанный на языке программирования JavaScript. </div>
+          </div>
         </div>
       </div>
     
       <div class="skill__percents">
         <div class="skill__percents-item">
           <div class="skill__percents-wrapper">
-            <div class="skill__percent-title">Верстка сайтов</div>
+            <div class="skill__percent-title">
+              <div class="lang-ua">Верстання сайтів</div>
+              <div class="lang-ru">Верстка сайтов</div>
+            </div>
             <div class="skill__percent-number">90%</div>
           </div>
           <div class="skill__percent-block"></div>
@@ -410,7 +491,10 @@
 
         <div class="skill__percents-item">
           <div class="skill__percents-wrapper">
-            <div class="skill__percent-title">Креативность</div>
+            <div class="skill__percent-title">
+              <div class="lang-ua">Креативність</div>
+              <div class="lang-ru">Креативность</div>
+            </div>
             <div class="skill__percent-number">80%</div>
           </div>
           <div class="skill__percent-block"></div>
@@ -428,7 +512,10 @@
 
         <div class="skill__percents-item">
           <div class="skill__percents-wrapper">
-            <div class="skill__percent-title">Честность</div>
+            <div class="skill__percent-title">
+              <div class="lang-гф">Чесність</div>
+              <div class="lang-ru">Честность</div>
+            </div>
             <div class="skill__percent-number">100%</div>
           </div>
           <div class="skill__percent-block"></div>
@@ -440,8 +527,14 @@
 
   <section class="portfolio" id="portfolio">
     <div class="container">
-      <div class="title title_fz20 resume__title resume__circle">Портфолио</div>
-      <h2 class="title title__fz36 resume__subtitle">Мои работы</h2>
+      <div class="title title_fz20 resume__title resume__circle">
+        <div class="lang-ua">Портфоліо</div>
+        <div class="lang-ru">Портфолио</div>
+      </div>
+      <h2 class="title title__fz36 resume__subtitle">
+        <div class="lang-ua">Мої роботи</div>
+        <div class="lang-ru">Мои работы</div>
+      </h2>
       <div class="divider resume__divider"></div>
 
       <div class="portfolio__wrapper">
@@ -509,17 +602,23 @@
         <div class="price__item">
           <div class="title title__fz14 price__text">
             <h4 class="price__name">Landing-page</h4>
-            <div class="price__cost">2000</div>
+            <div class="price__cost">от 1000</div>
           </div>
-          <div class="title title__fz12 price__descr">Одностраничный сайт для презентации услуг/товаров/...</div>
+          <div class="title title__fz12 price__descr">
+            <div class="lang-ua">Односторінковий сайт для презентації послуг/товарів/...</div>
+            <div class="lang-ru">Одностраничный сайт для презентации услуг/товаров/...</div>
+          </div>
         </div>
   
         <div class="price__item">
           <div class="title title__fz14 price__text">
             <h4 class="price__name">Интернет-магазин</h4>
-            <div class="price__cost">от 10000</div>
+            <div class="price__cost">от 5000</div>
           </div>
-          <div class="title title__fz12 price__descr">Инcтрумент для ваших продаж в сети</div>
+          <div class="title title__fz12 price__descr">
+            <div class="lang-ua">Інструмент для вашого продажу в мережі</div>
+            <div class="lang-ru">Инcтрумент для ваших продаж в сети</div>
+          </div>
         </div>
 
         <div class="price__item">
@@ -527,15 +626,21 @@
             <h4 class="price__name">Дизайн</h4>
             <div class="price__cost">Индивидуально</div>
           </div>
-          <div class="title title__fz12 price__descr">Создам дизайн для вашего сайта...</div>
+          <!-- <div class="title title__fz12 price__descr">Создам дизайн для вашего сайта...</div> -->
         </div>
 
         <div class="price__item">
           <div class="title title__fz14 price__text">
-            <h4 class="price__name">Корпоративный сайт</h4>
+            <h4 class="price__name">
+              <div class="lang-ua">Корпоративний сайт</div>
+              <div class="lang-ru">Корпоративный сайт</div>
+            </h4>
             <div class="price__cost">от 6000</div>
           </div>
-          <div class="title title__fz12 price__descr">Сайт для вашего бизнеса или компании</div>
+          <div class="title title__fz12 price__descr">
+            <div class="lang-ua">Сайт для вашого бізнесу чи компанії</div>
+            <div class="lang-ru">Сайт для вашего бизнеса или компании</div>
+          </div>
         </div>
       </div>
     </div>
@@ -549,10 +654,19 @@
           <img src="img/main_photo.jpg" alt="my_photo" class="about__main_photo">
         </div>
         <div class="contacts__descr">
-          <div class="title title__fz20 contacts__title contacts__circle">Контакты</div>
-          <h2 class="title title__fz36">Свяжитесь со мной</h2>
+          <div class="title title__fz20 contacts__title contacts__circle">
+            <div class="lang-ua">Контакти</div>
+            <div class="lang-ru">Контакты</div>
+          </div>
+          <h2 class="title title__fz36">
+            <div class="lang-ua">Зв'яжіться зі мною</div>
+            <div class="lang-ru">Свяжитесь со мной</div>
+          </h2>
           <div class="divider contacts__divider"></div>
-          <div class="title title__fz14 contacts__text">Любым удобным способом:</div>
+          <div class="title title__fz14 contacts__text">
+            <div class="lang-ua">Будь-яким зручним способом:</div>
+            <div class="lang-ru">Любым удобным способом:</div>
+          </div>
           <div class="contacts__social">
             <a href="https://www.facebook.com/vitaliy.kadelchuk" class="contacts__link">
               <svg width="30" height="30" viewBox="0 0 30 30" fill="#fff" xmlns="http://www.w3.org/2000/svg">
@@ -572,27 +686,35 @@
                 </svg>                
             </a>
           </div>
-          <div class="title title__fz14 contacts__text">Или оставьте ваши данные и я сам вам напишу:</div>
+          <div class="title title__fz14 contacts__text">
+            <div class="lang-ua">Або залиште ваші дані, і я сам вам напишу:</div>
+            <div class="lang-ru">Или оставьте ваши данные и я сам вам напишу:</div>
+          </div>
 
           <form id="contacts-form" action="#" class="contacts__form">
             <div class="contacts__input">
               <input required name="name" minlength="2" id="name" type="text">
-              <label for="name">Ваше имя</label>
+              <label for="name" class="lang-ua">Ваше ім'я</label>
+              <label for="name" class="lang-ru">Ваше имя</label>
             </div>
             <div class="contacts__input">
               <input required name="email" id="email" type="email">
-              <label for="email">Ваша почта</label>
+              <label for="email" class="lang-ua">Ваша пошта</label>
+              <label for="email" class="lang-ru">Ваша почта</label>
             </div>
 
             <div class="contacts__textarea">
               <textarea required name="text" id="text"></textarea>
-              <label for="text">Ваше сообщение</label>
+              <label for="text" class="lang-ua">Ваше повідомлення</label>
+              <label for="text" class="lang-ru">Ваше сообщение</label>
             </div>
             <div class="contacts__triggers">
-              <button class="contacts__btn">Отправить сообщение</button>
+              <button class="contacts__btn lang-ua">Надіслати повідомлення</button>
+              <button class="contacts__btn lang-ru">Отправить сообщение</button>
               <div class="contacts__policy">
                 <input required type="checkbox">
-                <span>Я согласен(а) с <a href="policy.html">политикой конфиденциальности</a></span>
+                <span class="lang-ua">Я згоден(а) з <a href="policy.html">політикою конфіденційності</a></span>
+                <span class="lang-ru">Я согласен(а) с <a href="policy.html">политикой конфиденциальности</a></span>
               </div>
             </div>
             

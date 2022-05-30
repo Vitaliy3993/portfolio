@@ -305,6 +305,11 @@
     .container {
         width: 90%;
     }
+    .menu {
+        &__close {
+            display: none;
+        }
+    }
     .promo {
         background-position-x: 60%;
         .title__fz20 {

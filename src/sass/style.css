@@ -98,7 +98,7 @@
 
 .animate__animated.animate__fast {
   -webkit-animation-duration: calc(1s * 0.8);
-  animation-duration: calc(1s * 0.8);
+  animation-duration: 0.5s;
   -webkit-animation-duration: calc(var(--animate-duration) * 0.8);
   animation-duration: calc(var(--animate-duration) * 0.8);
 }
@@ -115,6 +115,35 @@
   animation-duration: calc(1s * 3);
   -webkit-animation-duration: calc(var(--animate-duration) * 3);
   animation-duration: calc(var(--animate-duration) * 3);
+}
+
+@-webkit-keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+.animate__flash {
+  -webkit-animation-name: flash;
+  animation-name: flash;
 }
 
 @-webkit-keyframes fadeIn {
@@ -357,6 +386,34 @@ section {
   top: -20%;
 }
 
+.arrow-down {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 20px;
+  bottom: 15px;
+}
+
+.arrow-down img {
+  width: 30px;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  cursor: pointer;
+}
+
+.arrow-down img:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
 .title {
   font-weight: 700;
   font-size: 36px;
@@ -457,7 +514,7 @@ section {
 }
 
 .about {
-  padding: 120px 0 120px 0;
+  padding: 80px 0 120px 0;
 }
 
 .about__descr {
@@ -587,6 +644,11 @@ section {
   transition: 0.5s all;
 }
 
+.about__skill-accordeon img {
+  width: 100%;
+  height: 150px;
+}
+
 .divider {
   width: 60px;
   height: 3px;
@@ -601,7 +663,7 @@ section {
   position: fixed;
   z-index: 3;
   top: 20px;
-  right: 20px;
+  right: 30px;
   height: 21px;
   width: 30px;
   display: -webkit-box;
@@ -665,7 +727,7 @@ section {
   height: 100%;
   -webkit-transition: 0.6s all;
   transition: 0.6s all;
-  padding-top: 140px;
+  padding-top: 100px;
   padding-left: 40px;
   z-index: 10;
 }
@@ -692,7 +754,7 @@ section {
 .menu__link {
   position: relative;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 36px;
   margin-bottom: 15px;
 }
@@ -756,6 +818,38 @@ section {
   opacity: 0.5;
 }
 
+.menu__trigger {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  top: 0;
+  width: 230px;
+  margin-top: 20px;
+}
+
+.menu__trigger__lang {
+  width: 100px;
+  font-size: 20px;
+  background-color: #353535;
+  border-radius: 10px;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.menu__trigger__lang:hover {
+  background-color: #fff;
+  color: #353535;
+}
+
+.menu__trigger__lang__active {
+  background-color: #fff;
+  color: #353535;
+}
+
 .resume {
   position: relative;
 }
@@ -807,12 +901,45 @@ section {
 .resume__img {
   position: absolute;
   z-index: 0;
-  right: 0;
-  width: 55%;
-  top: 180px;
-  height: 85%;
+  right: 3%;
   -o-object-fit: contain;
      object-fit: contain;
+  -webkit-filter: brightness(0.6);
+          filter: brightness(0.6);
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.resume__img__mac {
+  width: 500px;
+  bottom: 3%;
+}
+
+.resume__img__mac:hover {
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+}
+
+.resume__img__tablet {
+  width: 200px;
+  margin-right: 20px;
+  bottom: 3%;
+}
+
+.resume__img__tablet:hover {
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+}
+
+.resume__img__phone {
+  width: 100px;
+  height: 150px;
+  bottom: 2%;
+}
+
+.resume__img__phone:hover {
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
 }
 
 .resume__column-title {
@@ -1397,6 +1524,14 @@ section {
   margin-right: 10px;
 }
 
+.lang-ua {
+  display: '';
+}
+
+.lang-ru {
+  display: '';
+}
+
 @media (max-width: 1199px) {
   .container {
     width: 900px;
@@ -1707,6 +1842,9 @@ section {
 @media (max-width: 575px) {
   .container {
     width: 90%;
+  }
+  .menu__close {
+    display: none;
   }
   .promo {
     background-position-x: 60%;

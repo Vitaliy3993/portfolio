@@ -29,11 +29,33 @@
     &__img {
         position: absolute;
         z-index: 0;
-        right: 0;
-        width: 55%;
-        top: 180px;
-        height: 85%;
+        right: 3%; 
         object-fit: contain;
+        filter: brightness(0.6);
+        transition: 0.5s all;
+        &__mac {
+            width: 500px;
+            bottom: 3%;
+            &:hover {
+                filter: brightness(1);
+            }
+        }
+        &__tablet {
+            width: 200px;
+            margin-right: 20px;
+            bottom: 3%;
+            &:hover {
+                filter: brightness(1);
+            }
+        }
+        &__phone {
+            width: 100px;
+            height: 150px;
+            bottom: 2%;
+            &:hover {
+                filter: brightness(1);
+            }
+        }
     }
     &__column-title {
         padding-left: 35px;
