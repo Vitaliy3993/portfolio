@@ -53,6 +53,7 @@
         grid-template-columns: repeat(3, 370px);
         grid-auto-columns: auto;
         gap: 45px;
+        opacity: 0;
     }
     &__percents-item {
         position: relative;

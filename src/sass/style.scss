@@ -11,6 +11,10 @@
 @import 'base/_mixins.scss';
 @import 'libs/animate';
 
+body {
+    background-color: #0c0c0c;
+}
+
 .container {
     display: block;
     margin: 0 auto;
@@ -71,6 +75,12 @@ section {
 
 .lang-ru {
     display: '';
+}
+
+.scroll-animation {
+    opacity: 1;
+    transition: all 1.5s;
+    transform: translateY(0%);
 }
 
 @import 'media/media';

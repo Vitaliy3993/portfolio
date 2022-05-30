@@ -12,19 +12,19 @@ window.addEventListener('DOMContentLoaded', () => {
             menu.classList.add('active');
             document.body.style.overflow = 'hidden';
             let scroll = calcScroll();
-            // document.body.style.marginRight = `${scroll}px`;
+            document.body.style.marginRight = `${scroll}px`;
         });
 
         function closeMenu() {
             closeElem.addEventListener('click', () => {
                 menu.classList.remove('active');
                 document.body.style.overflow = '';
-                // document.body.style.marginRight = `0px`;
+                document.body.style.marginRight = `0px`;
             });
             overlay.addEventListener('click', () => {
                 menu.classList.remove('active');
                 document.body.style.overflow = '';
-                // document.body.style.marginRight = `0px`;
+                document.body.style.marginRight = `0px`;
             });
         }
 
@@ -32,7 +32,7 @@ window.addEventListener('DOMContentLoaded', () => {
             if (e.code === "Escape" && menu.classList.contains('active')) {
                 menu.classList.remove('active');
                 document.body.style.overflow = '';
-                // document.body.style.marginRight = `0px`;
+                document.body.style.marginRight = `0px`;
             }
         });
 
@@ -141,7 +141,7 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    const borderDescr = (selector, descrSelector) => {
+    const skillDescr = (selector, descrSelector) => {
         const select = document.querySelectorAll(selector),
               descr = document.querySelectorAll(descrSelector);
 
@@ -234,7 +234,7 @@ window.addEventListener('DOMContentLoaded', () => {
             } 
         }
 
-        let timerSlide = setInterval(nextBtnSlide, 5000);
+        let timerSlide = setInterval(nextBtnSlide, 6000);
 
         next.addEventListener('click', () => {
             nextBtnSlide();  
@@ -279,6 +279,10 @@ window.addEventListener('DOMContentLoaded', () => {
         const langClassUa = document.querySelectorAll('.lang-ua'),
               langClassRu = document.querySelectorAll('.lang-ru');
 
+        langClassRu.forEach(lang => {
+            lang.style.display = 'none';
+        });
+
         langTrigger.forEach((trigger, i) => {
             trigger.addEventListener('click', (e) => {
                 langTrigger.forEach(item => {
@@ -301,17 +305,34 @@ window.addEventListener('DOMContentLoaded', () => {
                         });
                     });
                 }
-                   
-
-
             });
         })
+    }
+
+    function scrollHeightAnimation(selector) {
+        function onEntry(entry) {
+            entry.forEach(change => {
+              if (change.isIntersecting) {
+               change.target.classList.add('animate__animated', 'animate__fast', 'animate__fadeInUp');
+              }
+            });
+          }
+          
+        let options = {
+            threshold: [0.5] 
+        };
+        let observer = new IntersectionObserver(onEntry, options);
+        let elements = document.querySelectorAll(selector);
+        
+        for (let elm of elements) {
+            observer.observe(elm);
+        }
     }
 
     menu();
     accordion('.about__skill-main-wrapper', '.about__skill-accordeon');
     scrolling('.pageup');
-    borderDescr('.skill__item', '.skill__descr');
+    skillDescr('.skill__item', '.skill__descr');
     slider({
         container: '.portfolio__slider',
         slide: '.portfolio__image',
@@ -322,4 +343,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
     animationTextInterval('[data-anime]');
     changeLang();
+    scrollHeightAnimation('.skill__percents');
+    scrollHeightAnimation('.price');
 });
