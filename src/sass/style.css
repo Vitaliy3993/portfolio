@@ -327,6 +327,59 @@ section {
   cursor: pointer;
 }
 
+.carousel-indicators {
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  left: 0;
+  z-index: 15;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 15%;
+  margin-left: 15%;
+  list-style: none;
+}
+
+.dot {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  width: 30px;
+  height: 6px;
+  margin-right: 3px;
+  margin-left: 3px;
+  cursor: pointer;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  opacity: .5;
+  -webkit-transition: opacity .6s ease;
+  transition: opacity .6s ease;
+}
+
+.lang-ua {
+  display: '';
+}
+
+.lang-ru {
+  display: '';
+}
+
+.scroll-animation {
+  opacity: 1;
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
 .promo {
   background: url(../img/main_bg.jpg) center center/cover no-repeat;
   width: 100%;
@@ -1269,7 +1322,7 @@ section {
 }
 
 .price {
-  padding: 50px 0;
+  padding: 100px 0;
   opacity: 0;
 }
 
@@ -1390,9 +1443,9 @@ section {
   margin-top: 40px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 45px 190px 45px;
+  -ms-grid-rows: 45px 45px 100px;
   -ms-grid-columns: (280px)[2];
-      grid-template: 45px 190px 45px/repeat(2, 280px);
+      grid-template: 45px 45px 100px/repeat(2, 280px);
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1526,22 +1579,6 @@ section {
   margin-right: 10px;
 }
 
-.lang-ua {
-  display: '';
-}
-
-.lang-ru {
-  display: '';
-}
-
-.scroll-animation {
-  opacity: 1;
-  -webkit-transition: all 1.5s;
-  transition: all 1.5s;
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
-}
-
 @media (max-width: 1199px) {
   .container {
     width: 900px;
@@ -1603,11 +1640,6 @@ section {
     max-width: 830px;
     -ms-grid-columns: 300px 500px;
         grid-template-columns: 300px 500px;
-  }
-  .contacts__form {
-    -ms-grid-rows: 42px 190px 40px;
-    -ms-grid-columns: (200px)[2];
-        grid-template: 42px 190px 40px/repeat(2, 200px);
   }
 }
 

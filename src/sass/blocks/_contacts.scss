@@ -40,7 +40,7 @@
     &__form {
         margin-top: 40px;
         display: grid;
-        grid-template: 45px 190px 45px / repeat(2, 280px);
+        grid-template: 45px 45px 100px / repeat(2, 280px);
         justify-content: space-between;
         row-gap: 30px;
         label {

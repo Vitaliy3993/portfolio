@@ -68,7 +68,14 @@
             grid-template-columns: 300px 500px;
         }
         &__form {
-            grid-template: 42px 190px 40px / repeat(2,200px);
+            grid-template: 45px 45px 100px/repeat(2,230px);
+            row-gap: 20px;
+        }
+        &__photo {
+            img {
+                width: 270px;
+                height: 400px;
+            }
         }
     }
 }
@@ -159,6 +166,25 @@
             grid-template-columns: repeat(4,160px);
             grid-template-rows: repeat(2,160px);
         }
+        
+    }
+    .chevron-right {
+        svg {
+            width: 40px;
+            height: 40px;
+            &:hover {
+                width: 40px;
+            }
+        }
+    }
+    .chevron-left {
+        svg {
+            width: 40px;
+            height: 40px;
+            &:hover {
+                width: 40px;
+            }
+        }
     }
     .price {
         &__wrapper {
@@ -172,7 +198,18 @@
             grid-template-columns: 300px 360px;
         }
         &__form {
-            grid-template: 40px 105px 40px / repeat(2,170px);
+            display: block;
+            margin: 0 auto;
+            margin-top: 0px;
+            width: 95%;
+            margin-top: 30px;
+        }
+        &__input {
+            margin-bottom: 15px;
+            height: 30px;
+        }
+        &__textarea {
+            margin-bottom: 15px;
         }
         &__btn {
             width: 180px;
@@ -183,7 +220,6 @@
         }
     }
 }
-
 @media (max-width: 767px) {
     .container {
         max-width: 540px;
@@ -268,6 +304,15 @@
                 width: 280px;
             }
         }
+        &__window {
+            width: 100%;
+        }
+    }
+    .chevron-right {
+        display: none;
+    }
+    .chevron-left {
+        display: none;
     }
     .contacts {
         &__photo {
@@ -390,7 +435,7 @@
             width: 95%;
             margin-top: 30px;
             input {
-                height: 45px;
+                height: 30px;
                 margin-bottom: 30px;
             }
         }
