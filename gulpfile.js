@@ -8,8 +8,8 @@ const rename = require("gulp-rename");
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 
-// const dist = "./dist/";
-const dist = "../../../../../../../OpenServer/domains/Portfol";
+const dist = "./dist/";
+// const dist = "../../../../../../../OpenServer/domains/Portfol";
 
 gulp.task("copy-html", () => {
     return gulp.src("./src/index.html")
